@@ -1,0 +1,37 @@
+/*
+.flex-container {
+    border:  1px solid #000;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.item {
+    margin: 3px;
+    background-color: coral;
+    text-align: center;
+    font-size: 1.5em;
+    
+}
+*/
+
+.grid-container {
+    border:  1px solid #000;
+    margin: 0 auto;
+    display: grid;
+}
+
+.item {
+    margin: 3px;
+    background-color: coral;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.grid-2l-3c {
+    /*grid-template: 100px 100px / 200px 200px 200px; /*2 lines 3 columns*/
+    grid-template: repeat(2, 100px) / 1fr 2fr 1fr;
+}
