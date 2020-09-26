@@ -1,0 +1,204 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+#container {
+    width: 90%;
+    max-width: 980px;
+    margin: 0 auto;
+    display: grid;
+    /*Estilos gerais*/
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    /* Grid container configuration */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+
+/*
+   
+    Flexbox configuration
+   
+    */
+
+.flex-container {
+    display: flex
+}
+
+
+/*Header*/
+
+header {
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    border-bottom: #1de827 3px solid;
+    align-items: center
+}
+
+header h1 {
+    flex: 1;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+header a:hover {
+    color: #ccc;
+}
+
+
+/****************************************/
+
+
+/* Serviços */
+
+#services-content {
+    display: flex;
+}
+
+#services-content section,
+#services-content aside {
+    margin: 0.3125em/* 5 / 16 */
+}
+
+#services {
+    background-color: #f4f4f4;
+    flex: 1;
+}
+
+#services ul li {
+    border: 1px solid #ccc;
+    background-color: #e6e6e6;
+    padding: 0.625em;
+    /* 10 / 16 */
+}
+
+
+/* Cotação */
+
+.cotacao {
+    color: #fff;
+    background-color: #35424a;
+    height: 18.75em;
+    /* 300 / 16 */
+}
+
+.cotacao h3 {
+    margin: 0.3125em
+}
+
+#form-cotacao {
+    padding: 0.625em
+}
+
+#form-cotacao label {
+    display: block;
+}
+
+#form-cotacao input {
+    width: 15.9375em;
+    /* 255 / 16 */
+}
+
+
+/*******************************************/
+
+
+/*Footer*/
+
+footer {
+    padding: 30px;
+    color: #fff;
+    background-color: #1de827;
+    text-align: center;
+}
+
+
+/*Estlio geral buttons*/
+
+.button {
+    height: 2.375em;
+    background: #1de827;
+    border: 0;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+    color: #fff
+}
+
+
+/*Estilo para destaque*/
+
+.highlight {
+    color: #1de827;
+    font-weight: bold;
+}
+
+
+/* Media Queries */
+
+
+/* Non-Mobile First Method */
+
+@media screen and (max-width: 48em) {
+    /* 768/16 */
+    .flex-container {
+        flex-direction: column;
+    }
+    header h1 {
+        margin: 0;
+    }
+    header li {
+        display: block;
+        padding: 0.625em;
+        /* 10 / 16 */
+    }
+    /*Services*/
+    #services-content {
+        flex-direction: column;
+    }
+    #services h2 {
+        display: none;
+    }
+    #services-content section,
+    #services-content aside,
+    #services ul,
+    #services ul li {
+        margin: 0;
+        padding: 0;
+    }
+    .cotacao {
+        height: auto;
+    }
+    /**************************/
+    footer {
+        padding: 0.3125em;
+        /* 5 / 16*/
+    }
+}
+
+@media screen and (max-width: 20em) {
+    /* 320 / 16 */
+    #form-cotacao input,
+    #form-cotacao textarea,
+    #form-cotacao button {
+        width: 100%;
+    }
+}
