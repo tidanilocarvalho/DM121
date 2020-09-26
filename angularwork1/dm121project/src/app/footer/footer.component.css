@@ -1,0 +1,14 @@
+/*footer*/
+footer{
+    padding: 30px;
+    color: #fff;
+    background: #1de827;
+    text-align: center;
+}
+
+/* Media Queries */
+@media screen and (max-width: 48em){ /* 768/16 */
+    footer{
+        padding: 0.3125em; /* 5 / 16*/
+    }
+}
